@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="/empire/assets/img/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>        <!-- Bootstrap CSS -->
+
+    <script src="../../assets/js/user.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Validator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Register With Us</h2>
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="user" placeholder="Enter username" />
+          <small>Error message</small>
+        </div>
+       
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Enter email" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="Name">FullName</label>
+          <input type="text" id="fname"  name="fname" placeholder="Enter Your Name" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="pass" placeholder="Enter password" />
+          <small>Error message</small>
+        </div>
+        
+        <div class="form-control">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Enter password again"
+          />
+          <small>Error message</small>
+        </div>
+        <button type="submit">Submit</button>
+        <a class="btn" href="../Products.php">Return</a>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

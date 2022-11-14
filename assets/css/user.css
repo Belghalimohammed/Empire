@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+
+.containerr {
+    position: relative;
+}
+
+.containerr .card {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1%;
+    
+}
+
+.containerr .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #BF1932;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.containerr .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.containerr .card:after {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+.containerr .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.containerr .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.containerr .card .imgBx img {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    width: 150px;
+    height: 150px;
+}
+
+.containerr .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.containerr .card:hover .contentBx {
+    height: 210px;
+}
+
+.containerr .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.containerr .card .contentBx .size,
+.containerr .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.containerr .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.containerr .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.containerr .card .contentBx .size h3,
+.containerr .card .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.containerr .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.containerr .card .contentBx .size span:hover {  /* other bug */
+    background: #B90000;
+    cursor: pointer;
+}
+
+.containerr .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.containerr .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.containerr .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+}
+
+.ic {
+    position: relative;
+}
+.ic i {
+    width: 30px;
+    height: 30px;
+   position: relative;
+   bottom: 5px;
+   left: 40%;
+   border-radius: 50%;
+    
+}
+.ic i:hover{
+    cursor: pointer;
+}
+
+
+
+.loader {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes arrows {
+    0%,
+    100% {
+      color: black;
+      transform: translateY(0);
+    }
+    50% {
+      color: #3AB493;
+      transform: translateY(20px);
+    }
+  }
+  
+  .span {
+    --delay: 0s;
+    animation: arrows 1s var(--delay) infinite ease-in;
+  }
+
